@@ -1,0 +1,12 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Sid": "InvokeOnlyThisRuntimeForAuthenticatedUsers",
+    "Effect": "Allow",
+    "Action": [
+      "bedrock-agentcore:InvokeAgentRuntime",
+      "bedrock-agentcore:InvokeAgentRuntimeForUser"
+    ],
+    "Resource": "arn:aws:bedrock-agentcore:REGION:ACCOUNT_ID:runtime/RUNTIME_ID"
+  }]
+}

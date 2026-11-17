@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "BedrockModelAndKnowledgeRead",
+      "Effect": "Allow",
+      "Action": ["bedrock:InvokeModel", "bedrock:Retrieve"],
+      "Resource": "*"
+    },
+    {
+      "Sid": "DurableHistoryAndApprovalState",
+      "Effect": "Allow",
+      "Action": ["dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:UpdateItem"],
+      "Resource": "arn:aws:dynamodb:REGION:ACCOUNT_ID:table/HISTORY_TABLE"
+    },
+    {
+      "Sid": "InfrastructureActionsAreDeliberatelyScoped",
+      "Effect": "Allow",
+      "Action": ["REPLACE_WITH_REVIEWED_ACTIONS_ONLY"],
+      "Resource": "*"
+    }
+  ]
+}

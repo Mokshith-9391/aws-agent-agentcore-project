@@ -1,0 +1,15 @@
+{
+  "networkMode": "PUBLIC",
+  "protocolConfiguration": {
+    "serverProtocol": "HTTP",
+    "port": 8080,
+    "path": "/invocations"
+  },
+  "requestHeaderConfiguration": {
+    "requestHeaderAllowlist": ["X-Principal-Id"]
+  },
+  "lifecycleConfiguration": {
+    "idleRuntimeSessionTimeout": 300,
+    "maxLifetime": 1800
+  }
+}
